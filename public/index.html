@@ -1,0 +1,94 @@
+<html>
+<head>
+    <title>Fortune API</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica";
+        }
+
+        #container {
+            width: 70%;
+            padding: 20px;
+        }
+
+        hr {
+            border: 1px solid black;
+        }
+
+        code, pre {
+            font-size: 16px;
+            border: 2px solid crimson;
+            border-radius: 5px;
+            padding: 5px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Fortune API</h1>
+        <p>This API provides a REST interface to the fortunes one would normally see from the command-line fortune command.</p>
+        <img src="fortune.png" width="493" height="164"/><br>
+        <p>Note this is a WIP!</p>
+        <hr>
+        <h1>Documentation</h1>
+        <p>All API calls are made to the base URL <code>http://fortune-api.herokuapp.com/api</code></p><br>
+        <h2>GET /api/[?category=<a href="#category-endpoint">category</a>]</h2>
+        <p>Returns a random fortune, optionally from a specific category.</p><p>Sample Response:</p>
+        <pre>
+{
+    "success": true,
+    "fortune": "You have a strong appeal for members of your own sex."
+}      </pre><br>
+        <h2 id="category-endpoint">GET /api/categories</h2>
+        <p>Returns a list of all available fortune categories.</p><p>Response will be as follows:</p>
+        <pre>
+{
+    "categories": [
+        "computers",
+        "cookie",
+        "definitions",
+        "drugs",
+        "education",
+        "ethnic",
+        "fortunes",
+        "goedel",
+        "humorists",
+        "kids",
+        "law",
+        "linuxcookie",
+        "literature",
+        "love",
+        "magic",
+        "medicine",
+        "men-women",
+        "miscellaneous",
+        "news",
+        "people",
+        "pets",
+        "platitudes",
+        "politics",
+        "riddles",
+        "science",
+        "songs-poems",
+        "sports",
+        "startrek",
+        "translate-me",
+        "wisdom",
+        "work",
+        "zippy"
+    ]
+}       </pre>
+        <hr>
+        <h1>Contribute</h1>
+        <p>You can view the code for, star, and/or fork this repository <a href="http://github.com/tarunbod/fortune-api">here</a>.</p>
+    </div>
+</body>
+</html>
